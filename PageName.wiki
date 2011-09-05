@@ -1,0 +1,17 @@
+= Introduction =
+
+MQTT is a lightweight message passing protocol.
+
+
+= Configuring zmqtt =
+
+
+mod_mqtt -> start_broker -> true
+mod_mqtt -> port -> some_value
+mod_mqtt -> allow_anonymous -> some_boolean
+mod_mqtt -> username -> some_value
+mod_mqtt -> password -> some_value
+
+When a client is connecting to a broker from the same same site, it can use the site's config variables for username and password, so the call is simply connect(Context).
+
+! The data in the packets including the username and password are not encrypted.
